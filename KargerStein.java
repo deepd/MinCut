@@ -48,7 +48,7 @@ public class KargerStein {
             return 0;
         }
         int min = Integer.MAX_VALUE;
-        for(int i = 0; i < Math.pow((Math.log(G.size()) / Math.log(2)), 2); i++) {
+        for(int i = 0; i < (int)Math.pow((Math.log(G.size()) / Math.log(2)), 2); i++) {
             int val = fastMinCut(new Graph(G));
 //            System.out.println("The value found in "+i+"th iteration is : "+val);
             if(min > val)

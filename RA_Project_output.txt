@@ -1,0 +1,34 @@
+*********** 0th iteration ***********
+edges: 4334
+KargerStein output: 106
+        KargerStein :- Time: 1269992000ns
+StoerWagner output: 106
+        StoerWagner :- Time: 51348000ns
+
+*********** 1th iteration ***********
+edges: 4301
+KargerStein output: 128
+        KargerStein :- Time: 568015000ns
+StoerWagner output: 128
+        StoerWagner :- Time: 15530000ns
+
+*********** 2th iteration ***********
+edges: 4159
+KargerStein output: 126
+        KargerStein :- Time: 486089000ns
+StoerWagner output: 126
+        StoerWagner :- Time: 9878000ns
+
+*********** 3th iteration ***********
+edges: 4133
+KargerStein output: 112
+        KargerStein :- Time: 511105000ns
+StoerWagner output: 112
+        StoerWagner :- Time: 10268000ns
+
+*********** 4th iteration ***********
+edges: 4118
+KargerStein output: 119
+        KargerStein :- Time: 508243000ns
+StoerWagner output: 119
+        StoerWagner :- Time: 10329000ns

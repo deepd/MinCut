@@ -7,43 +7,46 @@ import java.util.Scanner;
  */
 public class MainRun {
     public static void main(String[] args) throws CloneNotSupportedException, FileNotFoundException {
-        Graph graph = new Graph(30, true);
-//        graph.printGraph();
+        for(int i = 0; i < 5; i++) {
+            System.out.println("*********** "+i+"th iteration ***********");
+            Graph graph = new Graph(50, false);
+            //        graph.printGraph();
 
-        /*int[][] mat = new int[5][5];
-        Scanner input = new Scanner (new File("src/array.txt"));
+            /*int[][] mat = new int[5][5];
+            Scanner input = new Scanner (new File("src/array.txt"));
 
-// read in the data
-        input = new Scanner(new File("src/array.txt"));
-        for(int i = 0; i < 5; ++i)
-        {
-            for(int j = 0; j < 5; ++j)
+    // read in the data
+            input = new Scanner(new File("src/array.txt"));
+            for(int i = 0; i < 5; ++i)
             {
-                if(input.hasNextInt())
+                for(int j = 0; j < 5; ++j)
                 {
-                    mat[i][j] = input.nextInt();
+                    if(input.hasNextInt())
+                    {
+                        mat[i][j] = input.nextInt();
+                    }
                 }
             }
+
+            Graph graph = new Graph(5, mat);*/
+
+
+            System.out.println("edges: "+graph.numberOfEdges());
+            KargerStein ks = new KargerStein();
+            Graph ks_graph = new Graph(graph);
+            long startTime = System.nanoTime();
+            System.out.println("KargerStein output: "+ks.kargerSteinSolver(ks_graph));
+            long endTime = System.nanoTime();
+            long duration = (endTime - startTime);
+            System.out.println("\t\tKargerStein :- Time: " + duration + "ns");
+
+            StoerWagner sw = new StoerWagner();
+            Graph sw_graph = new Graph(graph);
+            startTime = System.nanoTime();
+            System.out.println("StoerWagner output: "+sw.minCut(sw_graph));
+            endTime = System.nanoTime();
+            duration = (endTime - startTime);
+            System.out.println("\t\tStoerWagner :- Time: " + duration + "ns");
         }
-
-        Graph graph = new Graph(5, mat);*/
-
-
-        System.out.println(graph.numberOfEdges());
-        KargerStein ks = new KargerStein();
-        Graph ks_graph = new Graph(graph);
-        long startTime = System.nanoTime();
-        System.out.println(ks.kargerSteinSolver(ks_graph));
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);
-        System.out.println("\t\tKargerStein :- Time: " + duration + "ns");
-
-        StoerWagner sw = new StoerWagner();
-        Graph sw_graph = new Graph(graph);
-        startTime = System.nanoTime();
-        System.out.println(sw.minCut(sw_graph));
-        endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        System.out.println("\t\tStoerWagner :- Time: " + duration + "ns");
     }
 }
