@@ -94,7 +94,7 @@ public class Graph implements Cloneable{
     public void makeGraph(boolean isSparse) {
         double ratio;
         if(isSparse) {
-            ratio = 0.05;
+            ratio = 0.1;
         } else {
             ratio = 0.6;
         }

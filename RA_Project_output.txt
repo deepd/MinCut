@@ -1,3 +1,5 @@
+Nodes: 50 Dense
+
 *********** 0th iteration ***********
 edges: 4334
 KargerStein output: 106
@@ -32,3 +34,110 @@ KargerStein output: 119
         KargerStein :- Time: 508243000ns
 StoerWagner output: 119
         StoerWagner :- Time: 10329000ns
+
+*********************************************************************
+
+Nodes : 5 Dense
+
+*********** 0th iteration ***********
+edges: 55
+KargerStein output: 15
+                KargerStein :- Time: 415000ns
+StoerWagner output: 15
+                StoerWagner :- Time: 4535000ns
+*********** 1th iteration ***********
+edges: 41
+KargerStein output: 7
+                KargerStein :- Time: 250000ns
+StoerWagner output: 7
+                StoerWagner :- Time: 220000ns
+*********** 2th iteration ***********
+edges: 37
+KargerStein output: 10
+                KargerStein :- Time: 313000ns
+StoerWagner output: 10
+                StoerWagner :- Time: 221000ns
+*********** 3th iteration ***********
+edges: 52
+KargerStein output: 12
+                KargerStein :- Time: 214000ns
+StoerWagner output: 12
+                StoerWagner :- Time: 307000ns
+*********** 4th iteration ***********
+edges: 54
+KargerStein output: 19
+                KargerStein :- Time: 255000ns
+StoerWagner output: 19
+                StoerWagner :- Time: 256000ns
+
+
+*********************************************************************
+
+Nodes : 10 Sparse
+
+*********** 0th iteration ***********
+edges: 74
+KargerStein output: 5
+                KargerStein :- Time: 15514000ns
+StoerWagner output: 5
+                StoerWagner :- Time: 1468000ns
+*********** 1th iteration ***********
+edges: 54
+KargerStein output: 2
+                KargerStein :- Time: 11480000ns
+StoerWagner output: 2
+                StoerWagner :- Time: 1670000ns
+*********** 2th iteration ***********
+edges: 42
+KargerStein output: 1
+                KargerStein :- Time: 14077000ns
+StoerWagner output: 1
+                StoerWagner :- Time: 2363000ns
+*********** 3th iteration ***********
+edges: 74
+KargerStein output: 6
+                KargerStein :- Time: 4293000ns
+StoerWagner output: 6
+                StoerWagner :- Time: 430000ns
+*********** 4th iteration ***********
+edges: 47
+KargerStein output: 3
+                KargerStein :- Time: 6954000ns
+StoerWagner output: 3
+                StoerWagner :- Time: 362000ns
+
+*********************************************************************
+
+Nodes : 100 Sparse
+
+
+*********** 0th iteration ***********
+edges: 3113
+KargerStein output: 34
+                KargerStein :- Time: 9251149000ns
+StoerWagner output: 34
+                StoerWagner :- Time: 74908000ns
+*********** 1th iteration ***********
+edges: 3246
+KargerStein output: 32
+                KargerStein :- Time: 6993405000ns
+StoerWagner output: 32
+                StoerWagner :- Time: 44916000ns
+*********** 2th iteration ***********
+edges: 3277
+KargerStein output: 33
+                KargerStein :- Time: 6991266000ns
+StoerWagner output: 33
+                StoerWagner :- Time: 42731000ns
+*********** 3th iteration ***********
+edges: 3187
+KargerStein output: 27
+                KargerStein :- Time: 7062244000ns
+StoerWagner output: 27
+                StoerWagner :- Time: 49979000ns
+*********** 4th iteration ***********
+edges: 3318
+KargerStein output: 30
+                KargerStein :- Time: 7163671000ns
+StoerWagner output: 30
+                StoerWagner :- Time: 45010000ns
