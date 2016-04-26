@@ -190,6 +190,48 @@ public class Graph implements Cloneable{
 //        printGraph();
     }
 
+    public void resize() {
+        //handle size
+        size = valid_vertices;
+
+        //handle matrix
+        int[][] temp_matrix = new int[matrix.length][matrix[0].length];
+        for(int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++)
+                temp_matrix[i][j] = matrix[i][j];
+        }
+        matrix = new int[valid_vertices][valid_vertices];
+        int indexi = 0;
+        for(int i = 0; i < temp_matrix.length; i++) {
+            if(!valid_vertex[i])
+                continue;
+            int indexj = 0;
+            for(int j = 0; j < temp_matrix[i].length; j++) {
+                if(!valid_vertex[j])
+                    continue;
+                matrix[indexi][indexj] = temp_matrix[i][j];
+                indexj++;
+            }
+            indexi++;
+        }
+
+        //handle degree
+        indexi = 0;
+        int[] temp_degree = Arrays.copyOf(degree, degree.length);
+        degree = new int[valid_vertices];
+        for(int i = 0; i < temp_degree.length; i++) {
+            if(!valid_vertex[i])
+                continue;
+            degree[indexi++] = temp_degree[i];
+        }
+
+        //handle valid_vertex
+        valid_vertex = new boolean[valid_vertices];
+        for(int i = 0; i < valid_vertex.length; i++) {
+            valid_vertex[i] = true;
+        }
+    }
+
     //size
     public int size() {
         return size;

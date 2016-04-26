@@ -9,7 +9,7 @@ public class MainRun {
     public static void main(String[] args) throws CloneNotSupportedException, FileNotFoundException {
         for(int i = 0; i < 5; i++) {
             System.out.println("*********** "+i+"th iteration ***********");
-            Graph graph = new Graph(100, true);
+            Graph graph = new Graph(50, true);
             //        graph.printGraph();
 
             /*int[][] mat = new int[5][5];
