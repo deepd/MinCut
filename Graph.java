@@ -157,7 +157,6 @@ public class Graph implements Cloneable{
 
         pair[0] = v1;
         pair[1] = v2;
-//        System.out.println("adding "+v2+" to "+v1);
         return pair;
     }
 
@@ -167,7 +166,6 @@ public class Graph implements Cloneable{
         if(!valid_vertex[v2] || v1 == v2)
             return;
         edges = edges - matrix[v1][v2];
-//        System.out.println("edges: "+edges);
         degree[v1] = degree[v1] + degree[v2] - 2 * matrix[v1][v2];
         degree[v2] = 0;
         for(int j = 0; j < matrix[v2].length; j++) {
@@ -179,15 +177,12 @@ public class Graph implements Cloneable{
         matrix[v1][v2] = 0;
         matrix[v2][v1] = 0;
         matrix[v1][v1] = 0;
-//        System.out.println("making "+v2+" invalid");
         valid_vertex[v2] = false;
         for(int i = 0; i < size; i++)
             matrix[v2][i] = 0;
         for(int i = 0; i < size; i++)
             matrix[i][v2] = 0;
         valid_vertices--;
-//        System.out.println("Now the valid_vertices = "+valid_vertices);
-//        printGraph();
     }
 
     public void resize() {
@@ -264,13 +259,11 @@ public class Graph implements Cloneable{
 
     //the cut for when valid_vertices == 2
     public int theKargerSteinCut() {
-//        System.out.println("in the cut");
         int sum = Integer.MAX_VALUE;
         if(valid_vertices == 2) {
             for(int i = 0; i < size; i++) {
                 if(valid_vertex[i]) {
                     int temp_sum = 0;
-//                    System.out.println("valid vertex: "+i);
                     for(int j = 0; j < size; j++) {
                         temp_sum += matrix[i][j];
                     }
